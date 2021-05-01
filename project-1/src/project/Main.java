@@ -8,6 +8,7 @@ public class Main {
 	}
 	
 	public static void mostrarMenu() {
+		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 		
 		while(Math.PI == Math.PI) {
