@@ -34,7 +34,7 @@ public class Main {
 				break;
 				
 			case 2: // Devuelve los vehículos creados
-				System.out.println("\n" + Vehicle.toStringVehicles());
+				System.out.println("\n" + Vehicle.toStringVehicles() + "\n");
 				break;
 				
 			case 3: // Devuelve la cantidad de vehículos creados
@@ -43,6 +43,7 @@ public class Main {
 				
 			case 4: // Devuelve los vehículos verdes
 				System.out.println("\n" + Vehicle.toStringGreenVehicles());
+				break;
 				
 			// --------------------------------------------------------------------------------
 			
@@ -60,7 +61,7 @@ public class Main {
 				break;
 				
 			case 6: // Devuelve los sensores creados
-				System.out.println("\n" + Sensor.toStringSensors());
+				System.out.println("\n" + Sensor.toStringSensors() + "\n");
 				break;
 				
 			case 7: // Devuelve la cantidad de sensores
@@ -68,14 +69,14 @@ public class Main {
 				break;
 				
 			case 8: // Devuelve los sensores de tipo temperatura
-				System.out.println("\n" + Sensor.toStringTemperatureSensors());
+				System.out.println("\n" + Sensor.toStringTemperatureSensors() + "\n");
 				break;
 				
 			case 666: // Devuelve los sensores de tipo temperatura ordenados de menor a mayor
-				System.out.println("");
 				for (Sensor i: Sensor.sortTemperatureSensors()) {
 					System.out.println(i);
 				}
+				System.out.println("");
 				break;
 			}
 		}

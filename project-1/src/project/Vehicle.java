@@ -31,10 +31,10 @@ public class Vehicle {
     }
     
     public String toString() {
-    	return "MARCA:           " + this.getMark() + "\n" +
+    	return "\nMARCA:           " + this.getMark() + "\n" +
 		       "MODELO:          " + this.getModel() + "\n" + 
 		       "COLOR:           " + this.getColor() + "\n" +
-		       "VALOR COMERCIAL: " + this.getComercialValue() + "\n";
+		       "VALOR COMERCIAL: " + this.getComercialValue();
     }
     
     public static String toStringVehicles() {
@@ -91,7 +91,6 @@ public class Vehicle {
 	
 	public static int amountVehicles() {
 		return posAdd;
-		// ?
 	}
 	
 }

@@ -26,8 +26,8 @@ public class Sensor {
 	}
 	
 	public String toString() {
-		return "TIPO:  " + this.getType() + "\n" + 
-			   "VALOR: " + this.getValue() + "\n";
+		return "\nTIPO:  " + this.getType() + "\n" + 
+			   "VALOR: " + this.getValue();
 	}
 	
 	public static String toStringSensors() {
