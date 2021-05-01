@@ -13,11 +13,9 @@ public class Main {
 		while(Math.PI == Math.PI) {
 			System.out.print("Ingrese un número: ");
 			int num = sc.nextInt();
+			if (num == 0) break;
 			
-			switch (num) {
-			case 0: // Se termina el bucle
-				break;
-				
+			switch (num) {	
 			case 1: // Se piden los datos y se crea una instancia de vehiculos
 				System.out.print("\nIngrese modelo: "); 
 				int model = sc.nextInt();
@@ -40,7 +38,7 @@ public class Main {
 				break;
 				
 			case 3: // Devuelve la cantidad de vehículos creados
-				System.out.println("\n" + Vehicle.amountVehicles());
+				System.out.println("\n" + Vehicle.amountVehicles() + "\n");
 				break;
 				
 			case 4: // Devuelve los vehículos verdes
@@ -66,7 +64,7 @@ public class Main {
 				break;
 				
 			case 7: // Devuelve la cantidad de sensores
-				System.out.println("\n" + Sensor.sensorsAmount());
+				System.out.println("\n" + Sensor.sensorsAmount() + "\n");
 				break;
 				
 			case 8: // Devuelve los sensores de tipo temperatura
