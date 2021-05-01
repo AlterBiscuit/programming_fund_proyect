@@ -49,6 +49,8 @@ public class Sensor {
 	}
 	
 	public static Sensor[] sortTemperatureSensors() {
+		temperatureSensors = new ArrayList <Sensor>();
+		
 		for (int i = 0; i < posAdd; i++) {
     		if (Sensor.sensors[i].getType().equals("temperatura")) {
     			Sensor.temperatureSensors.add(Sensor.sensors[i]);
@@ -71,7 +73,7 @@ public class Sensor {
             returnArray[index] = returnArray[i];  
             returnArray[i] = smallerNumber;
 		}    
-	    return returnArray; 
+	    return returnArray;
 	}
 		
 	

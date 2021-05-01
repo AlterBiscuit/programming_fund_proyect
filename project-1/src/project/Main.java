@@ -17,6 +17,7 @@ public class Main {
 			switch (num) {
 			case 0: // Se termina el bucle
 				break;
+				
 			case 1: // Se piden los datos y se crea una instancia de vehiculos
 				System.out.print("\nIngrese modelo: "); 
 				int model = sc.nextInt();
@@ -33,12 +34,15 @@ public class Main {
 					System.out.println("Error: base de datos llena.\n");
 				}
 				break;
+				
 			case 2: // Devuelve los vehículos creados
 				System.out.println("\n" + Vehicle.toStringVehicles());
 				break;
+				
 			case 3: // Devuelve la cantidad de vehículos creados
 				System.out.println("\n" + Vehicle.amountVehicles());
 				break;
+				
 			case 4: // Devuelve los vehículos verdes
 				System.out.println("\n" + Vehicle.toStringGreenVehicles());
 				
@@ -56,15 +60,19 @@ public class Main {
 					System.out.println("Error: base de datos llena. ");
 				}
 				break;
+				
 			case 6: // Devuelve los sensores creados
 				System.out.println("\n" + Sensor.toStringSensors());
 				break;
+				
 			case 7: // Devuelve la cantidad de sensores
 				System.out.println("\n" + Sensor.sensorsAmount());
 				break;
+				
 			case 8: // Devuelve los sensores de tipo temperatura
 				System.out.println("\n" + Sensor.toStringTemperatureSensors());
 				break;
+				
 			case 666: // Devuelve los sensores de tipo temperatura ordenados de menor a mayor
 				System.out.println("");
 				for (Sensor i: Sensor.sortTemperatureSensors()) {
