@@ -43,7 +43,6 @@ public class Sensor {
     	for (int i = 0; i < posAdd; i++) {
     		if (Sensor.sensors[i].getType().equals("temperatura")) {
     			returnv += Sensor.sensors[i].toString() + "\n";
-    			Sensor.temperatureSensors.add(Sensor.sensors[i]);
     		}
     	}
     	return returnv;
