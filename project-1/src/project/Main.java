@@ -4,10 +4,10 @@ import java.util.Scanner;
 
 public class Main {
 	public static void main(String[] args) {
-		Main.mostrarMenu();
+		Main.showMenu();
 	}
 	
-	public static void mostrarMenu() {
+	public static void showMenu() {
 		Scanner sc = new Scanner(System.in);
 		
 		while(Math.PI == Math.PI) {
