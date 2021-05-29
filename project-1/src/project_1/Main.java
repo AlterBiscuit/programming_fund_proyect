@@ -115,17 +115,23 @@ public class Main {
 			
 			case 10: // Carga 5 coches desde un archivo de texto
 				try (Scanner input = new Scanner(new File("C:\\Users\\USUARIO\\Desktop\\Java\\project-1\\src\\project\\text.txt"))) {
+					String s = "";
+					while (input.hasNext()) {
+						s += input.next() + "\n";
+					}
+					
+					Scanner sc2 = new Scanner(s.replaceAll(",", " "));
 					
 					for (int i = 0; i < 5; i++) {
-						model = input.nextInt();
-						mark = input.next();
-						comercialvalue = input.nextDouble();
-						color = input.next();
+						
+						model = Integer.parseInt(sc2.next());
+						mark = sc2.next();
+						comercialvalue = Double.parseDouble(sc2.next());
+						color = sc2.next();
 						
 						new Vehicle(model, mark, comercialvalue, color);
 					}
 					System.out.println("\nSe han añadido 5 vehículos desde la base de datos.");
-						
 				} catch (FileNotFoundException e) {
 					e.printStackTrace();
 				}

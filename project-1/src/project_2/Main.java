@@ -13,6 +13,9 @@ public class Main {
 	
 	
 	public static void showMenu() {
+		@SuppressWarnings("resource")
+		Scanner input = new Scanner(System.in);
+
 		// Creación de los bichos de manera y en posiciónes aleatorias
 		Random r = new Random();
 		int numberOfBugs = r.nextInt(4) + 1;
@@ -37,9 +40,7 @@ public class Main {
 		}
 		
 		// ----------------------------------------------------------------
-		Scanner input = new Scanner(System.in);
 		int bugsDead = 0;
-		
 		
 		while (Math.PI == Math.PI) {
 			Main.showTable();
@@ -83,8 +84,8 @@ public class Main {
 			case 2: // Activar bomba atómica
 				boolean wasExploded = false;
 				while (wasExploded != true) {
-					row = (int) Math.round(Math.random() * 1.5);;
-					column = (int) Math.round(Math.random() * 1.5);;
+					row = (int) Math.round(Math.random() * 1.5);
+					column = (int) Math.round(Math.random() * 1.5);
 					
 					wasExploded = (Main.bugsList[row][column] == null || Main.bugsList[row][column].getHealth() <= 0) ? false : true;
 					if (wasExploded == true) { 
@@ -100,9 +101,9 @@ public class Main {
 				for (int i = 0; i < Main.bugsList.length ; i++) {
 					for (int j = 0; j < Main.bugsList.length; j++) {
 						if (Main.bugsList[i][j]  == null) {
-							continue;
+							break;
 						} else if (Main.bugsList[i][j].getHealth() <= 0) {
-							continue;
+							break;
 						} else if (Main.bugsList[i][j].getHealth() < minorBug.getHealth()) {
 							minorBug = bugsList[i][j];
 						}
