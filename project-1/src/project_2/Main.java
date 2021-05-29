@@ -94,23 +94,30 @@ public class Main {
 				}
 				break;
 		
-				
 			case 3: // Activar bicho mutante. Si todos los bichos tienen la misma salud, se aplica al primer bicho.
 				Bug minorBug = Main.bugsList[0][0];
 				
 				for (int i = 0; i < Main.bugsList.length ; i++) {
 					for (int j = 0; j < Main.bugsList.length; j++) {
-						if (Main.bugsList[i][j]  == null) {
-							break;
+						if (Main.bugsList[i][j].getHealth() != 0) {
+							minorBug = Main.bugsList[i][j];
+						}
+					}
+				}
+				
+				for (int i = 0; i < Main.bugsList.length ; i++) {
+					for (int j = 0; j < Main.bugsList.length; j++) {
+						if (Main.bugsList[i][j] == null) {
+							continue;
 						} else if (Main.bugsList[i][j].getHealth() <= 0) {
-							break;
+							continue;
 						} else if (Main.bugsList[i][j].getHealth() < minorBug.getHealth()) {
 							minorBug = bugsList[i][j];
 						}
 					}
 				}
-				
 				minorBug.setHealth(minorBug.getHealth() * 2);
+				
 			}
 		} 
 	}
