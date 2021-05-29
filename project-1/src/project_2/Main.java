@@ -99,7 +99,9 @@ public class Main {
 				
 				for (int i = 0; i < Main.bugsList.length ; i++) {
 					for (int j = 0; j < Main.bugsList.length; j++) {
-						if (Main.bugsList[i][j].getHealth() != 0) {
+						if (Main.bugsList[i][j] == null) {
+							continue;
+						} else if (Main.bugsList[i][j].getHealth() != 0) {
 							minorBug = Main.bugsList[i][j];
 						}
 					}
